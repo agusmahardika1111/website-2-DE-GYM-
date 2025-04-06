@@ -1,0 +1,914 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+/* ------------------------------------------------------navbar start------------------------------------------------------ */
+
+
+nav {
+    background-color:  #000000; /* Mengatur warna latar belakang navbar menjadi putih */
+    display: flex; /* Menggunakan flexbox untuk tata letak navbar */
+    justify-content: space-between; /* Menyebarkan elemen-elemen di dalam navbar dengan jarak yang merata di antara mereka */
+    padding: 1rem 2rem; /* Memberikan jarak dalam navbar: atas-bawah 1rem, kiri-kanan 2rem */
+    position: fixed; /* Menjadikan navbar tetap berada di atas halaman saat melakukan scroll */
+    top: 0; /* Menempatkan navbar di posisi paling atas */
+    left: 0; /* Menempatkan navbar di posisi paling kiri */
+    width: 100%; /* Memastikan navbar memenuhi lebar layar */
+    z-index: 999; /* Menempatkan navbar di atas elemen lainnya yang memiliki z-index lebih rendah */
+    transition: background-color 0.3s ease; /* Menambahkan transisi lembut selama 0.3 detik saat terjadi perubahan warna latar belakang */
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5); /* Menambahkan bayangan lembut di bawah navbar untuk efek kedalaman */
+}
+
+nav.sticky {
+    background-color: #ffffff; /* Mengubah warna latar belakang navbar menjadi putih saat navbar dalam keadaan sticky (tetap di atas saat scroll) */
+}
+
+nav ul {
+    display: flex; /* Menggunakan flexbox untuk tata letak elemen-elemen dalam navbar */
+    align-items: center; /* Menyelaraskan elemen-elemen secara vertikal di tengah */
+    gap: 2rem; /* Memberikan jarak antar elemen dalam navbar sebesar 2rem */
+    list-style: none; /* Menghilangkan penanda daftar (bullet points) pada elemen list */
+}
+
+nav div img {
+    width: 70px; /* Mengatur lebar gambar logo di dalam div navbar menjadi 100px */
+}
+
+/* ---- font pada navbar -----*/
+nav ul li a {
+    text-decoration: none; /* Menghilangkan garis bawah pada teks tautan */
+    color: #f5f3f3; /* Mengatur warna teks tautan menjadi #191919 (warna abu-abu tua) */
+    font-weight: 600; /* Mengatur ketebalan teks menjadi semi-bold */
+    padding: 8px 0; /* Menambahkan padding vertikal (atas dan bawah) sebesar 8px */
+    transition: all; /* Mengaktifkan transisi untuk semua perubahan properti */
+    transition-duration: 300ms; /* Durasi transisi diatur selama 300ms (0.3 detik) */
+    border-bottom: 1px solid rgba(12, 116, 116, 0); /* Menambahkan garis bawah transparan (tidak terlihat) */
+    border-radius: 5px; /* Membuat sudut elemen tautan melengkung dengan radius 5px */
+    padding: 10px 15px; /* Menambahkan padding 10px di atas/bawah dan 15px di kiri/kanan dan juga dapat mempengaruhi spasi font navbar*/
+}
+
+/* ---- font pada navbar ----*/
+
+nav ul li a:hover {
+    /* color: #be9448; /* Mengubah warna teks tautan menjadi #be9448 (warna emas) saat di-hover */
+    /* border-bottom: 1px solid #be9448; /* Menambahkan garis bawah berwarna emas saat di-hover */
+    background-color:rgba(29, 85, 230, 0.75); /* Mengubah warna latar belakang tautan menjadi biru saat di-hover */
+    box-shadow: 0px 0px 20px 4px rgba(29, 85, 230, 0.75); 
+}
+
+
+/* ----ikon pada navbar -----*/
+nav .menu-icon {
+    transition: all; /* Menambahkan transisi untuk semua properti CSS yang berubah */
+    transition-duration: 300ms; /* Durasi transisi adalah 300ms (0.3 detik) */
+    border-bottom: #ffffff00; /* Mengatur border-bottom dengan warna transparan (#19191900), yang sebenarnya tidak terlihat */
+    color: #ffffff; /* Mengatur warna teks (atau ikon) menjadi putih */
+    
+}
+
+
+nav .menu-list {
+    color: #fff;
+}
+
+/* ---ikon pada navbar ------*/
+
+nav .menu-icon:hover {
+    /* background-color: #fffc00; /* Mengubah warna latar belakang tautan menjadi emas saat di-hover */
+   /* box-shadow: 0px 0px 5px 1px #fffc00; /* Bayangan lebih kecil dan tidak terlalu menyebar */
+    color: #031377; /* Mengubah warna ikon menu menjadi biru saat elemen dalam keadaan hover (ketika kursor berada di atasnya) */
+    
+}
+
+
+.menu-icon {
+    /* background-color: rgb(12, 116, 116); */ /* Baris ini dikomentari, seharusnya untuk mengatur warna latar belakang ikon menu */
+    font-size: 25px; /* Mengatur ukuran font (atau ukuran ikon jika menggunakan font ikon) menjadi 25px */
+    display: none; /* Menyembunyikan elemen dengan kelas .menu-icon, sehingga tidak ditampilkan di halaman */
+    border-radius: 8px; /* Membuat sudut elemen tautan melengkung dengan radius 5px */
+    padding: 5px; /* Menambahkan padding 10px di atas/bawah dan 15px di kiri/kanan dan juga dapat mempengaruhi spasi font navbar*/
+}
+
+/* ------------------------------------------------------Navbar End------------------------------------------------------ */
+
+/* ------------------------------------------------------hero section------------------------------------------------------ */
+.hero {
+    background-image: url(asset/bg\ hitam\ putih.jpg); /* Mengatur gambar latar belakang elemen dengan path gambar pantai nusa dua */
+    min-height: 130vh; /* Menentukan tinggi minimum elemen sebesar 130% dari tinggi viewport */
+    display: flex; /* Mengatur elemen menjadi fleksibel untuk tata letak fleksibel */
+    align-items: center; /* Menyelaraskan item fleksibel secara vertikal ke tengah */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar latar belakang */
+    background-size: cover; /* Memperbesar atau memperkecil gambar agar menutupi seluruh area elemen */
+    background-position: center; /* Menempatkan gambar latar di tengah elemen */
+    position: relative; /* Mengatur posisi elemen relatif terhadap lokasi aslinya untuk referensi posisi anak elemen */
+}
+
+
+.hero::after {
+    content: ''; /* Membuat elemen pseudo-elemen kosong setelah elemen dengan kelas .hero */
+    display: block; /* Menampilkan pseudo-elemen sebagai blok */
+    position: absolute; /* Mengatur posisi pseudo-elemen secara absolut relatif terhadap elemen .hero */
+    width: 100%; /* Lebar pseudo-elemen diatur agar menutupi seluruh lebar elemen .hero */
+    height: 30%; /* Tinggi pseudo-elemen diatur menjadi 30% dari tinggi elemen .hero */
+    bottom: 0; /* Meletakkan pseudo-elemen di bagian bawah elemen .hero */
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%); 
+    /* Memberikan latar belakang gradasi dari hitam pekat (rgba(1, 1, 3, 1) pada 8%) menjadi transparan (rgba(255, 255, 255, 0) pada 50%) dari bawah ke atas (0 derajat) */
+}
+
+
+.hero .content {
+    padding: 1.4rem 7%; /* Memberikan jarak di dalam elemen: atas/bawah 1.4rem, kiri/kanan 7% dari lebar */
+    max-width: 60rem; /* Membatasi lebar maksimum elemen konten menjadi 60rem */
+}
+
+.hero .content h1 {
+    font-size: 4rem; /* Ukuran font */
+    color: #ffffff; /* Warna teks putih */
+    text-shadow: 
+        0 0 5px rgba(29, 85, 230, 0.75),  /* Cahaya putih lembut */
+        0 0 10px rgba(29, 85, 230, 0.75), /* Cahaya biru neon */
+        0 0 20px rgba(29, 85, 230, 0.75), 
+        0 0 40px rgba(29, 85, 230, 0.75); /* Efek glow lebih kuat */
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: left;
+}
+
+.hero .content p {
+    font-size: 1.5rem; /* Ukuran font */
+    margin-top: 0.5rem; /* Perbaikan margin */
+    line-height: 1.4; /* Jarak antar baris */
+    font-weight: 550; /* Ketebalan teks (350 diganti 400 karena standar CSS) */
+    color: #fff; /* Warna teks putih */
+    text-shadow: 
+        0 0 30px rgba(29, 85, 230, 0.75),  /* Cahaya putih lembut */
+        0 0 10px rgba(29, 85, 230, 0.75), /* Cahaya biru neon */
+        0 0 20px rgba(29, 85, 230, 0.75), 
+        0 0 30px rgba(29, 85, 230, 0.75); /* Efek glow lebih kuat */
+    
+}
+
+.hero .content .cta {
+    margin-top: 2rem; /* Memberikan jarak atas sebesar 2rem */
+    display: inline-block; /* Membuat elemen menjadi seperti kotak garis, memungkinkan pengaturan padding */
+    padding: 1rem 3rem; /* Memberikan jarak dalam elemen: atas/bawah 1rem, kiri/kanan 3rem */
+    font-size: 1.4rem; /* Ukuran teks tombol menjadi 1.4rem */
+    color: #ffffff; /* Warna teks putih */
+    background-color:rgba(29, 85, 230, 0.75); /* Warna latar belakang tombol menjadi biru */
+    border-radius: 0.5rem; /* Membulatkan sudut tombol sebesar 0.5rem */
+    box-shadow: 0px 0px 20px 4px rgba(29, 85, 230, 0.75);  /* Memberikan bayangan pada tombol dengan warna biru semi-transparan */
+    text-decoration: none; /* Menghapus garis bawah pada teks tautan */
+}
+
+
+/* Hero Section End */
+
+
+/* ------------------------------------------------------About Us------------------------------------------------------ */
+section p.ringkasan {
+    font-style: italic; /* Mengatur teks menjadi miring (italic) */
+    font-size: 18px; /* Ukuran font 18 piksel */
+    color: #ababab; /* Warna teks abu-abu muda */
+    margin-bottom: 3rem; /* Memberikan jarak bawah sebesar 3rem */
+    text-align: center; /* Menengahkan teks secara horizontal */
+    padding-top: 2rem; /* Memberikan jarak atas sebesar 2rem */
+}
+
+section {
+    scroll-margin-top: 80px; /* Mengatur jarak elemen dari bagian atas viewport saat di-scroll, disesuaikan dengan tinggi navbar */
+}
+
+section h3 {
+    font-size: 30px; /* Ukuran font untuk heading level 3 menjadi 30px */
+}
+
+section h3::after {
+    content: ""; /* Menambahkan elemen pseudo untuk dekorasi di bawah heading */
+    border-bottom: 5px solid rgba(29, 85, 230, 0.75); /* Menambahkan garis bawah dengan ketebalan 5px dan warna biru */
+    box-shadow: 0px 0px 10px 4px rgba(29, 85, 230, 0.75); /* Menambahkan shadow di garid */
+    width: 52px; /* Lebar garis 52px */
+    display: block; /* Menampilkan elemen sebagai blok */
+    margin: 20px auto; /* Memberikan jarak atas/bawah 20px dan menengahkan garis */
+}
+
+.layar-dalam {
+    width: 1000px; /* Lebar elemen maksimum 1000px */
+    margin: auto; /* Menengahkan elemen secara horizontal */
+}
+
+#aboutus {
+    text-align: center; /* Menengahkan semua teks dalam elemen dengan ID `aboutus` */
+    padding: 50px 10px 50px 10px; /* Memberikan jarak di dalam elemen: atas 50px, kanan/kiri 10px, bawah 50px */
+    color: #fff;
+}
+
+.aboutus .ringkasan {
+    text-align: center; /* Menengahkan teks di elemen dengan kelas `ringkasan` */
+    max-width: 30rem; /* Membatasi lebar maksimum elemen menjadi 30rem */
+    margin: auto; /* Menengahkan elemen secara horizontal */
+    font-weight: 100; /* Menjadikan teks tipis */
+    line-height: 1.6; /* Mengatur jarak antar baris sebesar 1.6 kali tinggi teks */
+    margin-bottom: 25px; /* Memberikan jarak bawah sebesar 25px */
+}
+
+
+.konten {
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: space-between; /* Memberi jarak di antara elemen */
+    align-items: flex-start; /* Menyelaraskan item ke bagian atas */
+    flex-wrap: wrap; /* Agar elemen bisa turun ke bawah pada layar sempit */
+    gap: 20px; /* Memberikan jarak antar elemen */
+}
+
+.konten-isi {
+    flex: 1; /* Memungkinkan konten teks mengambil ruang yang tersedia */
+    max-width: 50%; /* Batasi lebar maksimum menjadi 50% */
+    text-align: justify; /* untuk merubah rata tulisan pada sejarah perusahaan */
+    color:#fff
+   /* margin-top: -40px; /* untuk menaikan posisi konten, menggunakan -40px dan untuk menurunkan konten menggunakan 40px */
+}
+
+.video-container {
+    flex: 1; /* Memberikan elemen fleksibilitas untuk mengambil ruang yang tersedia dalam wadah flexbox */
+    width: 350px; /* Mengatur lebar elemen video-container menjadi 350px */
+    height: 400px; /* Mengatur tinggi elemen video-container menjadi 400px */
+    position: relative; /* Mengatur posisi elemen menjadi relatif terhadap posisi normalnya, memungkinkan elemen anak untuk diposisikan secara absolut */
+    overflow: hidden; /* Menyembunyikan bagian elemen yang melebihi batas lebar dan tinggi yang ditentukan */
+    background: #000000; /* Mengatur latar belakang elemen menjadi abu (#3d3b3b) */
+    border-radius: 10px; /* Membuat sudut elemen menjadi melengkung dengan radius 10px */
+}
+
+.video-container iframe {
+    position: absolute; /* Menetapkan posisi iframe menjadi absolut, relatif terhadap elemen induk yang memiliki posisi relatif (video-container) */
+    top: 0; /* Menempatkan iframe di bagian atas container (0px dari atas) */
+    left: 0; /* Menempatkan iframe di sisi kiri container (0px dari kiri) */
+    width: 100%; /* Mengatur lebar iframe untuk memenuhi lebar penuh dari .video-container */
+    height: 100%; /* Mengatur tinggi iframe untuk memenuhi tinggi penuh dari .video-container */
+    object-fit: cover; /* Menjaga rasio aspek video dan memastikan bahwa video menutupi seluruh area iframe, meskipun ada pemotongan */
+    border: 0; /* Menghilangkan border default pada iframe */
+}
+
+
+/* ------------------------------------------------------About Us-------------------------------------------------------- */
+
+/* ------------------------------------------------------Produk---------------------------------------------------------- */
+#menu {
+    text-align: center; /* Menengahkan teks dalam elemen dengan ID `menu` */
+    padding: 50px 10px 50px 10px; /* Memberikan jarak di dalam elemen: atas 50px, kanan/kiri 10px, bawah 50px */
+    background-color: #000000; /* Mengatur warna latar belakang menjadi abu */
+    color:#fff
+}
+
+.menu h2, 
+.contact h2 {
+    margin-bottom: 1rem; /* Memberikan jarak bawah sebesar 1rem untuk heading level 2 di elemen dengan kelas `menu` dan `contact` */
+}
+
+.menu p {
+    text-align: center; /* Menengahkan teks paragraf */
+    max-width: 30rem; /* Membatasi lebar paragraf maksimum menjadi 30rem */
+    margin: auto; /* Menengahkan paragraf secara horizontal */
+    font-weight: 100; /* Membuat teks tipis */
+    line-height: 1.6; /* Mengatur jarak antar baris sebesar 1.6 kali tinggi teks */
+}
+
+.menu .row {
+    display: flex; /* Membuat elemen menjadi kontainer fleksibel untuk tata letak */
+    flex-wrap: wrap; /* Memungkinkan item untuk berpindah ke baris berikutnya jika ruang tidak cukup */
+    margin-top: 5rem; /* Memberikan jarak atas sebesar 5rem */
+    justify-content: center; /* Menengahkan item dalam kontainer */
+}
+
+.menu .menu-card {
+    text-align: center; /* Menengahkan teks dalam elemen dengan kelas `menu-card` */
+    padding-bottom: 4rem; /* Memberikan jarak bawah sebesar 4rem */
+}
+
+.menu .row .menu-card img {
+    /* border-radius: 50%; */ /* Komentar: Membuat gambar berbentuk lingkaran (dalam keadaan aktif) */
+    border-radius: 5px; /* Membulatkan sudut gambar sebesar 5px */
+    width: 80%; /* Mengatur lebar gambar menjadi 80% dari kontainer */
+}
+
+.menu .row .menu-card .menu-card-title {
+    margin: 1rem auto 0.5rem; /* Memberikan jarak atas 1rem, bawah 0.5rem, dan menengahkan secara horizontal */
+    color:#fff
+}
+
+.menu .row .Pesan {
+    font-size: medium; /* Ukuran teks sedang */
+    color: aqua; /* Warna teks aqua */
+}
+
+.menu .row .cta1 {
+    margin-top: 2rem; /* Memberikan jarak atas sebesar 2rem */
+    display: inline-block; /* Membuat elemen seperti tombol yang bisa diatur padding-nya */
+    padding: 1rem 3rem; /* Jarak dalam elemen: atas/bawah 1rem, kiri/kanan 3rem */
+    font-size: 1rem; /* Ukuran teks 1rem (catatan: ada spasi tidak sengaja antara `1` dan `rem`) */
+    color: #fff; /* Warna teks putih */
+    background-color:rgba(29, 85, 230, 0.75); /* Warna latar belakang tombol biru */
+    border-radius: 0.5rem; /* Membulatkan sudut tombol sebesar 0.5rem */
+    box-shadow: 0px 0px 20px 4px rgba(29, 85, 230, 0.75); /* Memberikan bayangan pada tombol dengan warna biru semi-transparan */
+    text-decoration: none; /* Menghapus garis bawah pada teks tautan */
+}
+
+
+/* ------------------------------------------------------Produk---------------------------------------------------------- */
+
+/* ------------------------------------------------------Gallery--------------------------------------------------------- */
+/* Gaya untuk galeri */
+.gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery h3 {
+    font-size: 30px;
+    color: #FFFF;
+}
+
+.gallery1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Jarak antar video */
+}
+
+.gallery-video {
+    width: 300px;  /* Ukuran video lebih besar */
+    height: 200px; /* Tinggi video lebih besar */
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Efek hover untuk memperbesar video sebelum diklik */
+.gallery-video:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Ukuran video saat modal terbuka */
+.modal-content {
+    max-width: 95%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Caption (Teks Deskripsi Video) */
+#caption {
+    color: white;
+    margin: 20px auto;
+    font-size: 20px;
+    max-width: 85%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+/* Tombol Close */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+/* ------------------------------------------------------Gallery------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------kontact------------------------------------------------------ */
+
+/* CSS yang Anda sediakan */
+.contact {
+    max-width: 1200px; /* Membatasi lebar maksimum konten menjadi 1200px */
+    margin: 0 auto; /* Memusatkan konten secara horizontal di dalam elemen induk */
+    padding: 50px 20px; /* Memberikan jarak dalam (padding): atas/bawah 50px, kiri/kanan 20px */
+    gap: 30px; /* Menambahkan jarak antar-elemen di dalam flexbox (jika digunakan) */
+}
+
+.contact h3 {
+    font-size: 2rem; /* Mengatur ukuran teks heading level 3 menjadi 2rem */
+    margin-bottom: 1rem; /* Memberikan jarak bawah sebesar 1rem untuk elemen berikutnya */
+    text-align: center; /* Memusatkan teks secara horizontal */
+    color: #fff;
+}
+
+.contact p {
+    text-align: center; /* Menengahkan teks dalam paragraf */
+    max-width: 30rem; /* Membatasi lebar paragraf maksimum menjadi 30rem */
+    margin: auto; /* Memusatkan paragraf secara horizontal */
+    font-weight: 100; /* Membuat teks tipis */
+    line-height: 1.6; /* Menambahkan jarak antar baris */
+}
+
+.row {
+    display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+    justify-content: space-between; /* Menambahkan jarak antar elemen dengan merenggangkan secara proporsional */
+    align-items: flex-start; /* Menyelaraskan elemen ke atas secara vertikal */
+    margin-top: 20px; /* Menambahkan jarak di atas kontainer */
+    margin-left: 20px; /* Menambahkan jarak di sisi kiri kontainer */
+}
+
+iframe {
+    border-radius: 15px; /* Membulatkan sudut elemen iframe sebesar 15px */
+    border: 0; /* Menghapus border bawaan iframe */
+    width: 600px; /* Mengatur lebar peta menjadi 600px */
+    height: 300px; /* Mengatur tinggi peta menjadi 300px */
+}
+
+.contact-info {
+    flex: 1; /* Memungkinkan elemen ini untuk mengambil ruang yang tersedia */
+    margin-left: 50px; /* Menambahkan jarak antara peta dan elemen informasi kontak */
+}
+
+.contact-icons {
+    display: flex; /* Mengatur ikon menggunakan Flexbox */
+    flex-direction: column; /* Mengatur elemen dalam kolom vertikal */
+    align-items: flex-start; /* Menyelaraskan elemen ke kiri */
+}
+
+.icon-wrapper {
+    display: flex; /* Menggunakan Flexbox untuk ikon */
+    align-items: center; /* Menyelaraskan ikon dan teks secara vertikal */
+    margin-bottom: 15px; /* Memberikan jarak bawah sebesar 15px */
+}
+
+.contact-icons a {
+    margin-right: 8px; /* Menambahkan jarak antara ikon dan teks */
+}
+
+.icon-wrapper a {
+    color: rgb(255, 253, 253); /* Memberikan warna putih pada teks */
+    text-decoration: none; /* Menghapus garis bawah pada teks */
+}
+
+.contact .icon-wrapper a:hover {
+    color: rgba(29, 85, 230, 0.75); /* Mengubah warna teks saat kursor diarahkan (hover) */
+}
+
+/* CSS untuk styling tampilan komentar */
+.contact h4 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#comments-counter {
+    font-size: 1rem;
+    color: #ccc;
+    margin-left: 10px;
+}
+
+#comments-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.comment-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.comment-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(29, 85, 230, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comment-author {
+    font-weight: 600;
+    color: #fff;
+}
+
+.comment-body {
+    color: #eee;
+    line-height: 1.5;
+}
+
+.no-comments, .error-message, .loading-comments {
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.error-message {
+    color: #ff6b6b;
+}
+
+/* CSS untuk tombol komentar */
+.contact button {
+    background-color: rgba(29, 85, 230, 0.8);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.contact button:hover {
+    background-color: rgba(29, 85, 230, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact button:active {
+    transform: translateY(0);
+}
+
+/* CSS untuk modal Google Form - PENTING UNTUK MEMPERBAIKI MODAL */
+.modalgform {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.modalgform iframe {
+    width: 100%;
+    height: 80vh; /* 80% dari tinggi viewport */
+    border: none;
+}
+
+.modalgform-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 650px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.4s ease-out;
+    overflow-y: auto;
+    max-height: 90vh
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.closegform {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.closegform:hover {
+    color: #000;
+    transform: rotate(90deg);
+}
+
+
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Opsional: Sesuaikan jika ingin memusatkan secara vertikal */
+    }
+    /* Styling untuk tombol "Reset Komentar" */
+    button#reset-comments-btn {
+        display: inline-block; /* Membuat tombol seperti blok inline */
+        padding: 1rem 2rem; /* Padding di dalam tombol (atas/bawah 1rem, kiri/kanan 2rem) */
+        font-size: 1rem; /* Ukuran teks tombol */
+        font-weight: 600; /* Ketebalan teks */
+        color: #ffffff; /* Warna teks putih */
+        background-color: rgba(255, 59, 48, 0.75); /* Warna latar belakang merah */
+        border: none; /* Menghilangkan border default */
+        border-radius: 0.5rem; /* Sudut melengkung pada tombol */
+        cursor: pointer; /* Mengubah kursor menjadi tangan saat hover */
+        box-shadow: 0px 0px 20px 4px rgba(255, 59, 48, 0.75); /* Bayangan untuk efek 3D */
+        transition: all 0.3s ease; /* Animasi transisi untuk hover */
+        text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+        margin-top: 1rem; /* Jarak atas tombol */  
+    }
+    /* Efek hover pada tombol */
+    button#reset-comments-btn:hover {
+        background-color: rgba(255, 59, 48, 1); /* Warna latar belakang lebih gelap saat hover */
+        box-shadow: 0px 0px 30px 6px rgba(255, 59, 48, 1); /* Bayangan lebih besar saat hover */
+        transform: scale(1.05); /* Memperbesar tombol sedikit saat hover */
+    }
+
+/* Responsivitas untuk perangkat mobile */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .contact-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .modalgform-content {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 460px) and (max-width: 2550px) {
+    button#reset-comments-btn {
+        display: none; /* Menyembunyikan tombol */
+    }
+}
+
+/* ------------------------------------------------------kontak------------------------------------------------------ */
+
+/* Footer */
+footer {
+    /* background-color: #000000; Mengatur warna latar belakang footer menjadi putih */
+    text-align: center; /* Menengahkan teks di dalam footer */
+    padding: 1rem 0; /* Memberikan jarak bagian dalam: atas/bawah 1rem, kiri/kanan 0 */
+    margin-top: 3rem; /* Menambahkan jarak atas sebesar 3rem dari elemen sebelumnya */
+    box-shadow: 3px 1px 8px rgba(1, 1, 3, 0.5); /* Menambahkan bayangan pada footer */
+    z-index: 999; /* Mengatur posisi elemen di atas elemen lainnya */
+}
+
+footer .socials {
+    padding: 1rem 0 3rem; /* Memberikan jarak bagian dalam: atas 1rem, bawah 3rem, kiri/kanan 0 */
+}
+
+footer .socials a {
+    color: #ffffff; /* Memberikan warna putih untuk teks tautan media sosial */
+    margin: 1rem; /* Memberikan jarak di sekitar setiap tautan */
+}
+
+footer .socials a:hover {
+    color: #031377; /* Mengubah warna tautan menjadi kuning keemasan saat hover */
+}
+
+footer .links a:hover {
+    color: #000000; /* Mengubah warna teks tautan menjadi hitam saat hover */
+    border-radius: 5px; /* Membulatkan sudut latar belakang sebesar 5px */
+    background-color:rgba(29, 85, 230, 0.75); /* Mengubah warna latar belakang tautan menjadi emas saat di-hover */
+    box-shadow: 0px 0px 20px 4px rgba(29, 85, 230, 0.75); 
+}
+
+footer .links {
+    margin-bottom: 1.4rem; /* Memberikan jarak bawah sebesar 1.4rem untuk elemen berikutnya */
+}
+
+footer .links a {
+    color: #ffffff; /* Memberikan warna hitam untuk teks tautan */
+    padding: 0.7rem 1rem; /* Memberikan jarak dalam: atas/bawah 0.7rem, kiri/kanan 1rem */
+    text-decoration: none; /* Menghapus garis bawah pada teks tautan */
+    
+}
+
+footer .credit {
+    font-size: 0.8rem; /* Mengatur ukuran teks menjadi lebih kecil */
+}
+
+footer .credit p {
+    color: #ffffff; /* Memberikan warna hitam untuk teks paragraf */        
+}
+
+footer .credit a {
+    color: #ffffff; /* Memberikan warna hitam untuk teks tautan */
+    font-weight: 700; /* Membuat teks tautan menjadi tebal */
+    text-decoration: none; /* Menghapus garis bawah pada teks tautan */
+    
+    
+}
+
+footer .credit a:hover {
+    color: rgba(29, 85, 230, 0.75); /* Mengubah warna teks tautan menjadi kuning keemasan saat hover */
+}
+
+
+@media (min-width: 1024px) {
+    .video-container {
+        max-width: 80%; /* Membatasi lebar maksimum elemen .video-container menjadi 80% dari lebar kontainer induk */
+        margin: 0 auto; /* Memusatkan elemen secara horizontal dengan margin otomatis di kiri dan kanan */
+    }
+
+    .contact .row .map {
+        height: 30rem; /* Mengatur tinggi elemen peta (.map) dalam bagian .contact menjadi 30rem */
+    }
+
+    .contact .row form {
+        padding-top: 0; /* Menghapus jarak bagian atas (padding-top) pada elemen form dalam .contact */
+    }
+}
+
+
+
+@media only screen and (max-width : 768px) {
+    section {
+        scroll-margin-top: 100px; /* Sesuaikan dengan tinggi navbar di tampilan mobile */
+    }
+
+    html {
+        font-size: 62.5%; /* Mengatur ukuran font dasar menjadi 62.5% dari nilai default browser, yang setara dengan 10px (pada browser default 16px) */
+    }
+    
+    nav {
+        flex-wrap: wrap; /* Membuat elemen dalam navbar membungkus ke baris baru jika ruang tidak cukup */
+       /* position: fixed; */ /* Baris ini dikomentari, namun jika diaktifkan, ini akan membuat navbar tetap di posisi atas halaman saat di-scroll */
+       /* width: 100%; */ /* Baris ini dikomentari, namun jika diaktifkan, ini akan mengatur lebar navbar menjadi 100% dari lebar layar */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Mengubah arah flex item dalam navbar menjadi kolom (vertikal) */
+        width: 100%; /* Mengatur lebar ul (unordered list) menjadi 100% dari lebar navbar */
+    }
+    
+    nav ul.hidden {
+        display: none; /* Menyembunyikan elemen <ul> yang memiliki kelas "hidden" */
+    }
+    
+
+    /* ---------------about us----------------*/
+    .konten {
+        flex-direction: column; /* Mengatur elemen menjadi kolom */
+        align-items: center; /* Menyelaraskan elemen di tengah */
+    }
+
+    .konten-isi, .video-container {
+        max-width: 100%; /* Memastikan elemen mengisi lebar penuh */
+        width: 100%; /* Atur lebar menjadi 100% */
+    }
+
+    .video-container {
+        height: auto; /* Atur tinggi video menjadi otomatis agar sesuai dengan rasio */
+        padding-bottom: 56.25%; /* Tetap menjaga rasio aspek 16:9 */
+    }
+
+    .video-container iframe {
+        height: 100%; /* Menggunakan 100% untuk menyesuaikan dengan wadah */
+    }
+    /* ---------------about us----------------*/
+
+    /* --------------gallery -------------------------*/
+    .gallery .gallery1 {
+        justify-content: center;
+        gap: 10px; /* Mengurangi jarak antar gambar pada layar lebih kecil */
+    }
+
+    .gallery .gallery-img, .gallery .gallery-img1 {
+        width: 250px; /* Mengatur lebar gambar .gallery-img dan .gallery-img1 menjadi 250px untuk memastikan gambar tidak terlalu besar di layar tablet */
+        height: 170px; /* Mengatur tinggi gambar .gallery-img dan .gallery-img1 menjadi 170px agar ukuran gambar tetap proporsional dan sesuai dengan ruang yang tersedia */
+    }
+    /* --------------gallery -------------------------*/
+
+
+
+
+
+    /* -------------- kontak -------------------------*/
+    .menu-icon {
+        display: flex; /* Mengubah elemen .menu-icon menjadi elemen flexbox, memungkinkan penataan anak elemen secara fleksibel */
+        align-items: center; /* Menyelaraskan elemen anak di dalam .menu-icon secara vertikal ke tengah */
+    }
+    
+    .row {
+        flex-direction: column; /* Menyusun elemen dalam .row secara vertikal (dari atas ke bawah) */
+        align-items: center; /* Menyelaraskan elemen-elemen dalam .row secara horizontal ke tengah */
+        text-align: center; /* Menyelaraskan teks di dalam .row ke tengah */
+    }
+    
+    iframe {
+        width: 100%; /* Mengatur lebar iframe agar memenuhi lebar elemen induknya */
+        height: 250px; /* Mengatur tinggi iframe menjadi 250px */
+    }
+    
+    .contact-info {
+        margin-left: 0; /* Menghapus margin kiri pada elemen .contact-info */
+        margin-top: 20px; /* Menambahkan jarak 20px di bagian atas elemen .contact-info */
+    }    
+
+    .contact-icons {
+        align-items: center; /* untuk mengatur posisi ikon media sosial pada halaman kontak */
+    }
+
+    .icon-wrapper {
+        justify-content: center; /* Menyelaraskan elemen-elemen anak dalam .icon-wrapper secara horizontal ke tengah */
+    }    
+   
+}
+/* -------------- kontak -------------------------*/
+
+
+
+@media only screen and (max-width: 480px) {
+    .gallery .gallery1 {
+        justify-content: center; /* Tetap rata tengah */
+    }
+
+    .gallery .gallery-img, .gallery .gallery-img1, .gallery .gallery-img3 {
+        width: 150px; /* Mengubah ukuran gambar .gallery-img, .gallery-img1, dan .gallery-img3 menjadi 150px di lebar agar lebih kecil di layar mobile */
+        height: 100px; /* Mengubah tinggi gambar .gallery-img, .gallery-img1, dan .gallery-img3 menjadi 100px agar proporsional dengan ukuran lebar */
+    }
+    
+    .gallery .gallery-img2 {
+        width: 300px; /* Mengubah ukuran gambar .gallery-img2 menjadi 300px di lebar agar lebih besar dibandingkan gambar lainnya di layar mobile */
+        height: 200px; /* Mengubah tinggi gambar .gallery-img2 menjadi 200px untuk menyesuaikan dengan lebar yang lebih besar */
+    }    
+}
